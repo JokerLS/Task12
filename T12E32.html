@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+            
+        .bubble {
+            width: 200px;
+            height: 50px;
+            position: relative;
+            border: 1px solid rgba(200, 200, 200, 0.5);
+        }
+    
+        .bubble::after {
+            position: absolute;
+            left: 187px;
+            top: -2px;
+            width: 0;
+            height: 0;
+            content: '';
+            border-bottom: 10px solid red;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble"></div>
+</body>
+</html>

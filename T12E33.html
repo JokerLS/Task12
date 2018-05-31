@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+        
+        .bubble {
+            width: 200px;
+            height: 50px;
+            position: relative;
+            border: 1px solid rgba(200, 200, 200, 0.5);
+            background: white;
+        }
+
+        .bubble::before {
+            position: absolute;
+            top: -6px;
+            left: 10px;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            content: '';
+            border-left: 1px solid rgba(200, 200, 200, 0.5);
+            border-top: 1px solid rgba(200, 200, 200, 0.5);
+            background: white;
+            transform: rotateZ(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble"></div>
+</body>
+</html>
